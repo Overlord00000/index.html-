@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <style>
+        .center {
+            text-align: center;
+            margin-top: 200px;
+        }
+    </style>
+    <script>
+        function playScarySong() {
+            var audio = new Audio('scary_violin.wav');
+            audio.play();
+        }
+
+        function displayWord() {
+            var wordElement = document.getElementById("word");
+            wordElement.innerText = "babun hang rizz";
+            playScarySong();
+            setTimeout(function() {
+                wordElement.innerText = "";
+            }, 5000);
+        }
+    </script>
+</head>
+<body>
+    <div class="center">
+        <button onclick="displayWord()">Press me</button>
+        <p id="word"></p>
+    </div>
+</body>
+</html>
